@@ -40,6 +40,18 @@ app.get('/api/approval-required', (req, res) => {
   res.send({ response: "I am alive" }).status(200)
 })
 
+app.get('/api/transaction-complete', (req, res) => {
+  
+  io.emit('io-transaction-complete', 
+    {
+      touchpointId: '001',
+      timestamp: '2018-05-06:21:25:15' // should be pulled from request - not datetime.now
+    }
+  )
+
+  res.send({ response: "I am alive" }).status(200)
+})
+
 app.post('/api/login', (req, res) => {
   var promise = new Promise(function(resolve, reject) {
     var xhr = new XMLHttpRequest()
