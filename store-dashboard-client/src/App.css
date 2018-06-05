@@ -1,0 +1,40 @@
+html,body { height: 100%; margin: 0px; padding: 0px; }
+
+.App {
+  text-align: center;
+  background-image:
+    radial-gradient(
+      rgba(130,200,70),
+      rgba(70,155,70)
+    );
+  padding-bottom: 250px;
+  color: white;
+}
+
+.App-header {
+  padding: 30px;
+}
+
+.App-title {
+  font-size: 2.0em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.brand-logo-container {
+  width: 200px;
+  height: 80px;
+}
+
+.brand-logo-container img {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+      background-color: lightblue;
+  }
+}
